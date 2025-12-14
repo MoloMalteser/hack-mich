@@ -66,7 +66,7 @@ function renderCart() {
 
     <div class="space-between mb-8">
         <div><b>Gesamtsumme</b> </div>
-        <div>${(sum + 4.99).toFixed(2)}€ </div>
+        <div>${(sum + 0).toFixed(2)}€ </div>
     </div>
     `;
 }
@@ -87,7 +87,7 @@ function decryptArtcle() {
 function checkoutCart() {
     let sum = shoppingCart.map(i => i.price).reduce((ac, a) => ac + a, 0);
 
-    let totalPrice = sum + 4.99;
+    let totalPrice = sum + 0;
 
     if (totalPrice <= 0) {
         alert('Herzlichen Glückwunsch! Du hast uns gehackt!!');
